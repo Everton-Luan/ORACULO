@@ -12,6 +12,55 @@ O jogador assume o papel de uma estagiária no **NEXUS Labs** que precisa descob
 
 1. Instalar a Raylib com o instalador do site oficial da biblioteca: [Raylib](https://www.raylib.com/)
 2. Adicionar o caminho `C:\raylib\w64devkit\bin` no path das variaveis de ambiente (O nome do caminho vai depender de onde você instalou a biblioteca)
+## Building the Project
+
+Before building this project, make sure that **CMake** is installed and available in your environment.
+
+You can download CMake from the official website:
+
+[CMake](https://cmake.org/?utm_source=chatgpt.com)
+
+### 1. Open CMake GUI
+
+Run the following command:
+
+```bash
+cmake-gui
+```
+
+In CMake GUI, set the following directories:
+
+* **Source directory:** the root directory of this project
+* **Build directory:** the directory where the generated build files will be stored
+
+![CMake Setup](project/cmake_0.png)
+
+### 2. Configure the Project
+
+Click **Configure** to configure the project.
+
+CMake will ask you to select a generator/toolchain. Choose the one appropriate for your platform:
+
+* **macOS:** Xcode
+* **Linux:** Unix Makefiles
+* **Windows:** Visual Studio or Ninja
+
+  * If you choose Ninja, make sure it is installed and available in your `PATH`.
+
+### 3. Generate the Build Files
+
+Once configuration is complete, click **Generate** to generate the build files for your selected toolchain.
+
+You can then open the generated project using your selected IDE/toolchain and build it normally.
+
+Alternatively, you can build the project directly from the command line:
+
+```bash
+cmake --build <build_path>
+```
+
+Replace `<build_path>` with the path to your configured build directory.
+
 
 ## Sobre o Jogo
 
