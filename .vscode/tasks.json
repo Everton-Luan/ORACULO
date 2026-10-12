@@ -11,6 +11,7 @@
                 
                 "${workspaceFolder}/src/entities/*.c",
                 "${workspaceFolder}/src/graphics/*.c",
+                "${workspaceFolder}/src/map/*.c",
                 "${workspaceFolder}/src/*.c",
                 "${workspaceFolder}/controller/*.c", 
     

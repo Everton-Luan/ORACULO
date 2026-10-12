@@ -33,9 +33,6 @@ typedef enum PlayerActionType{
     idle,
     walk,
     run,
-    atk,
-    hurt,
-    death,
     total_actions
 } PlayerActionType;
 

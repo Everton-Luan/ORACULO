@@ -48,6 +48,8 @@ typedef struct AnimationBody{
     float duration_left; //Duração restante para mudar para o próximo quadro.
 
     int frames_por_linha;  //Quantidade de quadros em cada linha do spritesheet.
+    float spr_width;   // largura de cada frame
+    float spr_height;  // altura de cada frame
     float spr_dimension;    //Dimensão de cada quadro individual em pixels (ex: 16.0f).
 
     AnimationType type; //Tipo de animação (repeating ou oneshot).
