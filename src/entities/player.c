@@ -71,7 +71,7 @@ void PLayerReset(PlayerBody *self){
     //Texturas já estão carregadas, só reseta estado.
     ResetAnimations(self);
 
-    self->position     = (Vector2){ 100.0f, 100.0f };
+    self->position     = (Vector2){ 250.0f, 250.0f };
     self->direction    = RIGHT;
     self->action_atual = idle;
 }
