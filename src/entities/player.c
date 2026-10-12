@@ -51,7 +51,7 @@ static void InitAnimations(PlayerBody *self){
 
 //Reseta o quadro de todas as animações do player para o estado inicial delas.
 void ResetAnimations(PlayerBody *self){
-    for (int i = 0; i < self->action_atual; i++){
+    for (int i = 0; i < total_actions; i++){
         self->anims[i].frame_atual_idx = self->anims[i].first_idx;
         self->anims[i].duration_left = self->anims[i].speed;
     }
@@ -84,25 +84,23 @@ void PlayerUpdateAction(PlayerBody *self){
 
     //Eixo X (direita e esquerda são opostos — não podem ser simultâneos).
     if (IsKeyDown(KEY_LEFT) && !IsKeyDown(KEY_RIGHT)) {
+        self->direction   = LEFT;
 
         if (IsKeyDown(KEY_LEFT_SHIFT)) {
-            self->direction   = LEFT;
             self->position.x -= (player_speed * 2);
             correndo = true;
         }else {
-            self->direction   = LEFT;
             self->position.x -= player_speed;
             movendo = true;
         }
         
     } else if (IsKeyDown(KEY_RIGHT) && !IsKeyDown(KEY_LEFT)) {
+        self->direction   = RIGHT;
 
         if (IsKeyDown(KEY_LEFT_SHIFT)) {
-            self->direction   = RIGHT;
             self->position.x += (player_speed * 2);
             correndo = true;
         }else {
-            self->direction   = RIGHT;
             self->position.x += player_speed;
             movendo = true;
         }

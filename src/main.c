@@ -15,6 +15,13 @@ int main(void)
         PlayerBody player;
         PlayerInit(&player);
 
+        // PROVISÓRIO — manual em PNG
+        Texture2D manual = LoadTexture("assets/texture/foto_cap3.png"); // ajuste o caminho
+        bool manual_aberto = false;
+        int sw = GetScreenWidth();
+        int sh = GetScreenHeight();
+        // fim provisório
+
         // ── Teste MAP_CROP (recorte do Pokemon Center 1F) ──
         MapBody map;
         MapInit(&map, MAP_CROP, "assets/texture/sprites_teste/mapas_temporarios/Game Boy Advance - Pokemon FireRed.png");
@@ -26,8 +33,13 @@ int main(void)
         while (!WindowShouldClose())
         {   
             if (IsKeyDown(KEY_R)) PLayerReset(&player);
+            // PROVISÓRIO — abre/fecha manual
+            if (IsKeyPressed(KEY_M)) manual_aberto = !manual_aberto;
 
-            PlayerUpdateAction(&player);
+            if (!manual_aberto) {
+                PlayerUpdateAction(&player);
+            }
+            // fim provisório
 
             BeginDrawing();
 
@@ -35,8 +47,41 @@ int main(void)
                 MapDraw(&map);   // mapa primeiro, player por cima
                 PlayerDraw(&player);
 
+                // PROVISÓRIO — exibe o PNG do manual por cima de tudo
+                if (manual_aberto) {
+                // Calcula escala para caber na tela mantendo proporção
+                float escala_x = (float)sw / manual.width;
+                float escala_y = (float)sh / manual.height;
+                float escala   = (escala_x < escala_y) ? escala_x : escala_y; // menor dos dois
+
+                float dest_w = manual.width  * escala;
+                float dest_h = manual.height * escala;
+
+                // Centraliza na tela
+                float dest_x = (sw - dest_w) / 2.0f;
+                float dest_y = (sh - dest_h) / 2.0f;
+
+                DrawRectangle(0, 0, sw, sh, (Color){ 0, 0, 0, 200 }); // fundo escuro
+                DrawTexturePro(
+                    manual,
+                    (Rectangle){ 0, 0, (float)manual.width, (float)manual.height },
+                    (Rectangle){ dest_x, dest_y, dest_w, dest_h },
+                    (Vector2){ 0, 0 },
+                    0.0f,
+                    WHITE
+                );
+                DrawText("M - Fechar", 10, 10, 18, YELLOW);
+            } else {
+                    DrawText("M - Manual", 10, 10, 18, WHITE); // dica na tela
+                }
+                // fim provisório
+
             EndDrawing();
         }   
+
+        // PROVISÓRIO
+        UnloadTexture(manual);
+        // fim provisório
 
         PlayerUnload(&player);
         MapUnload(&map);
