@@ -67,7 +67,7 @@ int main(void)
     PlayerInit(&player);
 
     // PROVISÓRIO — manual em PNG
-    Texture2D manual   = LoadTexture("assets/texture/foto_cap3.png");
+    Texture2D manual   = LoadTexture("assets/texture/manual_jogador/foto_cap3.png");
     bool manual_aberto = false;
     int sw = GetScreenWidth();
     int sh = GetScreenHeight();
