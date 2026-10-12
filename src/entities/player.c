@@ -5,31 +5,33 @@
 
 //Inicializa as animações carregando as texturas e montando os corpos dos tipos de animações do player.
 static void InitAnimations(PlayerBody *self){
-    self->textures[idle] = LoadTexture("assets/texture/sprites_teste/tiny_heroes_spr/3 Dude_Monster/Dude_Monster_Idle_4.png");
+    self->textures[idle] = LoadTexture("assets/texture/player_sprites/Personagem_Principal_Idle_4.png");
     self->anims[idle] = (AnimationBody){
-            .first_idx = 0,
-            .last_idx = 3,
-            .frame_atual_idx = 0,
-            .step = 1,
-            .speed = 0.1,
-            .duration_left = 0.1,
-            .frames_por_linha = 4,
-            .spr_dimension = 32.0,
-            .type = REPEATING
-        };
+    .first_idx        = 0,
+    .last_idx         = 3,
+    .frame_atual_idx  = 0,
+    .step             = 1,
+    .speed            = 0.1f,
+    .duration_left    = 0.1f,
+    .frames_por_linha = 4,
+    .spr_width        = 175.0f,  // largura total ÷ 4
+    .spr_height       = 257.0f,  // altura total da imagem
+    .type             = REPEATING
+    };
 
-    self->textures[walk] = LoadTexture("assets/texture/sprites_teste/tiny_heroes_spr/3 Dude_Monster/Dude_Monster_Walk_6.png");
+    self->textures[walk] = LoadTexture("assets/texture/player_sprites/Personagem_Principal_Walk_5.png");
     self->anims[walk] = (AnimationBody){
-            .first_idx = 0,
-            .last_idx = 5,
-            .frame_atual_idx = 0,
-            .step = 1,
-            .speed = 0.1,
-            .duration_left = 0.1,
-            .frames_por_linha = 5,
-            .spr_dimension = 32.0,
-            .type = REPEATING
-        };
+    .first_idx        = 0,
+    .last_idx         = 4,       // 5 frames: índices 0 a 4
+    .frame_atual_idx  = 0,
+    .step             = 1,
+    .speed            = 0.1f,
+    .duration_left    = 0.1f,
+    .frames_por_linha = 5,
+    .spr_width        = 177.6f,  // largura total ÷ 5
+    .spr_height       = 274.0f,  // altura total da imagem
+    .type             = REPEATING
+    };
 
     self->textures[run] = LoadTexture("assets/texture/sprites_teste/tiny_heroes_spr/3 Dude_Monster/Dude_Monster_Run_6.png");
     self->anims[run] = (AnimationBody){
@@ -40,7 +42,9 @@ static void InitAnimations(PlayerBody *self){
             .speed = 0.1,
             .duration_left = 0.1,
             .frames_por_linha = 5,
-            .spr_dimension = 32.0,            
+            .spr_dimension = 32.0, 
+            .spr_width = 32.0,
+            .spr_height = 32.0,           
             .type = REPEATING
         };
 }
@@ -58,7 +62,7 @@ void ResetAnimations(PlayerBody *self){
 void PlayerInit(PlayerBody *self){
     InitAnimations(self);
 
-    self->position = (Vector2){ 100.0f, 100.0f };
+    self->position = (Vector2){ 250.0f, 250.0f };
     self->direction = RIGHT;
     self->action_atual = idle;
 }
@@ -152,7 +156,7 @@ void PlayerDraw(PlayerBody *self){
     DrawTexturePro(
         texture,
         frame,
-        (Rectangle){ self->position.x, self->position.y, 128.0f, 128.0f },
+        (Rectangle){ self->position.x, self->position.y, 175.0f , 257.0f  },
         (Vector2)  { 0.0f, 0.0f },
         0.0f,
         WHITE

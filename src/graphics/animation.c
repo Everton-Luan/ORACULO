@@ -41,8 +41,8 @@ void AnimationUpdate(AnimationBody *self){
 }
 
 Rectangle AnimationFrame(AnimationBody *self){
-    int x = (self->frame_atual_idx % self->frames_por_linha) * self->spr_dimension; //Cálculo da coluna (eixo x)
-    int y = (self->frame_atual_idx / self->frames_por_linha) * self->spr_dimension; //Cálculo da linha (eixo y)
+    int x = (self->frame_atual_idx % self->frames_por_linha) * self->spr_width; //Cálculo da coluna (eixo x)
+    int y = (self->frame_atual_idx / self->frames_por_linha) * self->spr_height; //Cálculo da linha (eixo y)
 
-    return (Rectangle){.x = (float)x, .y = (float)y, .width = self->spr_dimension, .height = self->spr_dimension};
+    return (Rectangle){.x = (float)x, .y = (float)y, .width = self->spr_width, .height = self->spr_height};
 }

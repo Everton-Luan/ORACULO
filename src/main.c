@@ -20,7 +20,7 @@ int main(void)
         MapInit(&map, MAP_CROP, "assets/texture/sprites_teste/mapas_temporarios/Game Boy Advance - Pokemon FireRed.png");
         MapSetCrop(&map,
             (Rectangle){ 8.0f, 25.0f, 239.0f, 158.0f },        // origem na textura
-            (Rectangle){ 500.0f,  200.0f, 239*4.0f, 158*4.0f }     // destino na tela (escala 4x)
+            (Rectangle){ 220.0f,  100.0f, 239*6.0f, 158*6.0f }     // destino na tela (escala 4x)
         );
 
         while (!WindowShouldClose())
