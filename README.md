@@ -141,10 +141,18 @@ Projeto desenvolvido por:
 
 * **[Rayane M. de Pontes Gomes - rmpg@cesar.school - rynemaria@gmail.com]**
 * **[Luann Gabriel Flôr Alves da Silva - lgfas@cesar.school]**
+* **[Luan Marcos Alves da Silva]**
 * **[Everton Luan Gomes Batista - elgb@cesar.school]**
-* **[Mirella de Sousa Albuquerque]**
+* **[Mirella de Sousa Albuquerque - msa5@cesar.school]**
 * **[Marina Silva Mendes]**
 * **[Anamel Thaís Ferreira Lima]**
 * **[Maria Giovanna Oliveira Carvalho - mgoc@cesar.school]**
 
+## Contribuiçāo
+```
+Mirella Albuquerque e Anamel - Documentação e Entregas
+Luan Marcos, Luann Flôr, Everton Luan - Codificando 
+Rayane Pontes, Maria Giovanna e Marina Mendes - Design
+```
 ---
+
