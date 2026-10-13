@@ -8,6 +8,11 @@ O jogador assume o papel de uma estagiária no **NEXUS Labs** que precisa descob
 
 ---
 
+## Guia de instalação (Raylib)
+
+1. Instalar a Raylib com o instalador do site oficial da biblioteca: [Raylib](https://www.raylib.com/)
+2. Adicionar o caminho `C:\raylib\w64devkit\bin` no path das variaveis de ambiente (O nome do caminho vai depender de onde você instalou a biblioteca)
+
 ## Sobre o Jogo
 
 Você é uma estagiária recém-contratada pelo **NEXUS Labs**, instituto responsável pelo desenvolvimento do **ORÁCULO**, um sistema de IA avançado utilizado para prever riscos e auxiliar na tomada de decisões.
