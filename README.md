@@ -61,11 +61,6 @@ A proposta educativa é fazer o jogador **experimentar esses problemas na práti
 
 [![▶ Clique para assistir: ](https://img.youtube.com/vi/VpeTWdTRT4A/maxresdefault.jpg)](https://www.youtube.com/watch?v=VpeTWdTRT4A)
 
-# Sketches e Storybords
-![Sketches](./project/pngs/sketchs.jpeg)
-![Storyboards](./project/pngs/storybords.jpeg)
-
-
 # Minigames
 
 ## 1. O Triador de Treinamento
