@@ -59,9 +59,7 @@ A proposta educativa é fazer o jogador **experimentar esses problemas na práti
 
 # Screencast PIF
 
-<video src="./project/Oráculo_Screencast_PIF.mp4" width="600" controls>
-  Seu navegador não suporta a tag de vídeo.
-</video>
+[![▶ Clique para assistir: ](https://img.youtube.com/vi/VpeTWdTRT4A/maxresdefault.jpg)](https://www.youtube.com/watch?v=VpeTWdTRT4A)
 
 # Sketches e Storybords
 ![Sketches](./project/pngs/sketchs.jpeg)
