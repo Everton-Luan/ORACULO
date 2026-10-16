@@ -35,7 +35,8 @@ typedef enum AnimationType {
  * @param speed Velocidade da animação do quadro.
  * @param duration_left Duração restante para mudar para o próximo quadro.
  * @param frames_por_linha Quantidade de quadros em cada linha do spritesheet.
- * @param spr_dimension Dimensão de cada quadro individual em pixels (ex: 16.0f).
+ * @param spr_width Dimensão de largura de cada quadro individual em pixels (ex: 16.0f).
+ * @param spr_height Dimensão de altura de cada quadro individual em pixels (ex: 32.0f).
  * @param type Tipo de animação (repeating ou oneshot).
  */
 typedef struct AnimationBody{
@@ -50,7 +51,6 @@ typedef struct AnimationBody{
     int frames_por_linha;  //Quantidade de quadros em cada linha do spritesheet.
     float spr_width;   // largura de cada frame
     float spr_height;  // altura de cada frame
-    float spr_dimension;    //Dimensão de cada quadro individual em pixels (ex: 16.0f).
 
     AnimationType type; //Tipo de animação (repeating ou oneshot).
 } AnimationBody;

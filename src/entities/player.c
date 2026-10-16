@@ -42,7 +42,6 @@ static void InitAnimations(PlayerBody *self){
             .speed = 0.1,
             .duration_left = 0.1,
             .frames_por_linha = 5,
-            .spr_dimension = 32.0, 
             .spr_width = 32.0,
             .spr_height = 32.0,           
             .type = REPEATING
