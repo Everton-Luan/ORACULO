@@ -1,4 +1,4 @@
-# ORÁCULO
+![logo](./project/pngs/logo.png)
 
 > **"Não lute contra a IA. Aprenda a pensar além dela."**
 
