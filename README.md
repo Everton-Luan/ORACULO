@@ -10,7 +10,7 @@ O principal desafio não é simplesmente encontrar a resposta certa, mas **apren
 
 
 ---
-![menu principal do oráculo](project/pngs/menu-principal.png)
+![menu principal do oráculo](./project/pngs/menu-principal.png)
 
 ## Sobre o Jogo
 
