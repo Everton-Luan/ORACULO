@@ -57,7 +57,7 @@ int main(void)
     PlayerBody player;
     PlayerInit(&player);
 
-    Texture2D manual   = LoadTexture("assets/texture/foto_cap3.png"); // PROVISÓRIO
+    Texture2D manual   = LoadTexture("assets/texture/manual_jogador/foto_cap3.png"); // PROVISÓRIO
     bool manual_aberto = false;
 
     MapBody map; // PROVISÓRIO

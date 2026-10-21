@@ -14,27 +14,38 @@
 /** @enum TelaMenu
  *  
  * @brief Subtelas disponíveis dentro da cena de menu.
+ * @param TELA_PRINCIPAL Tela inicial com as opções do menu.
+ * @param TELA_NOME Tela inicial com as opções do menu.
+ * @param TELA_RANKING Subtela de inserção de nome do jogador.
+ * @param TELA_TOTAL Quantidade total de telas.
  */
 typedef enum TelaMenu {
     TELA_PRINCIPAL, /**< Tela inicial com as opções do menu. */
     TELA_NOME,      /**< Subtela de inserção de nome do jogador. */
     TELA_RANKING,   /**< Subtela de ranking. */
-    TELA_TOTAL      /**< Sentinela — quantidade total de telas. */
+    TELA_TOTAL      /**< Quantidade total de telas. */
 } TelaMenu;
 
 /** @enum MenuOpc
  * 
  * @brief Opções disponíveis no menu principal.
+ * @param MENU_OPC_INICIAR  Inicia uma nova partida.
+ * @param MENU_OPC_RANKING  Navega para a subtela de ranking.
+ * @param MENU_OPC_OPC  Quantidade total de opções.
  */
 typedef enum MenuOpc {
-    MENU_OPC_INICIAR = 0, /**< Inicia uma nova partida. */
+    MENU_OPC_INICIAR, /**< Inicia uma nova partida. */
     MENU_OPC_RANKING,     /**< Navega para a subtela de ranking. */
-    MENU_TOTAL_OPC        /**< Sentinela — quantidade total de opções. */
+    MENU_TOTAL_OPC        /**< Quantidade total de opções. */
 } MenuOpc;
 
 /** @struct MenuBody
  * 
  * @brief Estado completo da cena de menu.
+ * @param backgrounds[TELA_TOTAL] Uma textura de fundo por subtela.
+ * @param tela_atual Subtela visível no momento.
+ * @param opcao_atual Opção selecionada no menu principal.
+ * @param confirmado True quando o jogador confirma com ENTER.
  */
 typedef struct MenuBody {
     Texture2D backgrounds[TELA_TOTAL]; /**< Uma textura de fundo por subtela. */
