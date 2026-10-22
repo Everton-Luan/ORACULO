@@ -2,6 +2,7 @@
 #define RESOURCES_H
 
 #include <raylib.h>
+#include "include/database/database.h"
 
 /**
  * @file resources.h
@@ -13,7 +14,9 @@
 
 /** @brief Recursos globais do jogo. Acesse via ponteiro retornado por ResourcesGet(). */
 typedef struct ResourcesBody {
-    Font fonte_principal; /**< Fonte VT323, usada em todas as cenas. */
+    Font fonte_principal; // Fonte VT323, usada em todas as cenas.
+    GameData ranking[DATABASE_MAX_ENTRIES];
+    int ranking_count;
 }ResourcesBody;
 
 /**
