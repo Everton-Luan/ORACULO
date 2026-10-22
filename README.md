@@ -10,6 +10,61 @@ O principal desafio não é simplesmente encontrar a resposta certa, mas **apren
 
 
 ---
+## Compilando o Projeto
+
+## Guia de instalação (Raylib)
+
+1. Instalar a Raylib com o instalador do site oficial da biblioteca: [Raylib](https://www.raylib.com/)
+2. Adicionar o caminho `C:\raylib\w64devkit\bin` no path das variaveis de ambiente (O nome do caminho vai depender de onde você instalou a biblioteca)
+## Building the Project
+Antes de compilar este projeto, certifique-se de que o **CMake** esteja instalado e disponível no seu ambiente de desenvolvimento.
+
+Você pode baixar o CMake pelo site oficial:
+
+[CMake](https://cmake.org/)
+
+### 1. Abra a interface gráfica do CMake
+
+Execute o seguinte comando:
+
+```bash
+cmake-gui
+```
+
+Na interface gráfica do CMake, configure os seguintes diretórios:
+
+* **Diretório de origem (Source directory):** diretório raiz deste projeto.
+* **Diretório de compilação (Build directory):** diretório onde os arquivos gerados durante o processo de compilação serão armazenados.
+
+![Configuração do CMake](project/cmake_0.png)
+
+### 2. Configure o projeto
+
+Clique em **Configure** para configurar o projeto.
+
+O CMake solicitará que você selecione um gerador (generator) ou uma ferramenta de compilação (toolchain). Escolha a opção adequada ao seu sistema operacional:
+
+* **macOS:** Xcode
+* **Linux:** Unix Makefiles
+* **Windows:** Visual Studio ou Ninja
+
+  * Caso escolha o Ninja, certifique-se de que ele esteja instalado e disponível na variável de ambiente `PATH`.
+
+### 3. Gere os arquivos de compilação
+
+Após concluir a configuração, clique em **Generate** para gerar os arquivos de compilação correspondentes à ferramenta selecionada.
+
+Em seguida, você poderá abrir o projeto gerado na IDE ou ferramenta de desenvolvimento escolhida e compilá-lo normalmente.
+
+Como alternativa, também é possível compilar o projeto diretamente pelo terminal:
+
+```bash
+cmake --build <build_path>
+```
+
+Substitua `<build_path>` pelo caminho do diretório de compilação configurado anteriormente.
+
+
 ![menu principal do oráculo](./project/pngs/menu-principal.png)
 
 ## Sobre o Jogo
@@ -475,7 +530,7 @@ Projeto desenvolvido por:
 
 * **[Rayane M. de Pontes Gomes - rmpg@cesar.school - rynemaria@gmail.com]**
 * **[Luann Gabriel Flôr Alves da Silva - lgfas@cesar.school]**
-*  **[Luan Marcos Alves da Silva]**
+* **[Luan Marcos Alves da Silva]**
 * **[Everton Luan Gomes Batista - elgb@cesar.school]**
 * **[Mirella de Sousa Albuquerque - msa5@cesar.school]**
 * **[Marina Silva Mendes]**
@@ -489,3 +544,4 @@ Luan Marcos, Luann Flôr, Everton Luan - Codificando
 Rayane Pontes, Maria Giovanna e Marina Mendes - Design
 ```
 ---
+
