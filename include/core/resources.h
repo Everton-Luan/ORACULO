@@ -1,22 +1,22 @@
+/**
+ * @file resources.h
+ * @brief Recursos globais compartilhados por todas as cenas do jogo.
+ * @details Centraliza informações que precisam estar disponíveis durante toda
+ *          a execução. Deve ser inicializado uma única vez
+ *          no main e descarregado ao encerrar o jogo.
+ */
+
 #ifndef RESOURCES_H
 #define RESOURCES_H
 
 #include <raylib.h>
 #include "include/database/database.h"
 
-/**
- * @file resources.h
- * @brief Recursos globais compartilhados por todas as cenas do jogo.
- * @details Centraliza assets que precisam estar disponíveis durante toda
- *          a execução, como fontes. Deve ser inicializado uma única vez
- *          no main e descarregado ao encerrar o jogo.
- */
-
-/** @brief Recursos globais do jogo. Acesse via ponteiro retornado por ResourcesGet(). */
+/** @brief Recursos globais do jogo. */
 typedef struct ResourcesBody {
     Font fonte_principal; // Fonte VT323, usada em todas as cenas.
-    GameData ranking[DATABASE_MAX_ENTRIES];
-    int ranking_count;
+    GameData ranking[DATABASE_MAX_ENTRIES]; // Rank dos players com melhores scores
+    int ranking_count; // Quantidade de dados que tem no ranking
 }ResourcesBody;
 
 /**

@@ -7,7 +7,7 @@
 #define DATABASE_MAX_ENTRIES 10
 
 /** @brief Caminho do arquivo de saves. */
-#define DATABASE_FILE_PATH "database/ranking.txt"
+#define DATABASE_FILE_PATH "database/ranking_db.txt"
 
 /**
  * @brief Dados de uma entrada do ranking.
